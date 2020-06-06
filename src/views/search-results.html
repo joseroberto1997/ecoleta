@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/search-results.css">
-    <link rel="stylesheet" href="/styles/reponsive.css">
+{% set pageId = "page-search-results" %}
+
+{% block title %}
     <title>Resultado da pesquisa</title>
-</head>
+{% endblock title %}
 
-<body>
 
-    <div id="page-search-results">
 
-        <header>
-            <img src="/assets/logo.svg" alt="logo">
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
 
-            <a href="./index.html">
-                <span></span>
-                Voltar para home</a>
-        </header>
+
+{% block content %}
+        
+       {% include "partials/page-header.html" %}
 
        <main>
            
@@ -52,10 +47,4 @@
                 </div>
         </div>
        </main>
-
-
-    </div>
-
-</body>
-
-</html>
+{% endblock content %}
